@@ -22,6 +22,7 @@ public:
     Logger();
     ~Logger();
 
+public:
     void log(Level level, const std::string& message);
 
 private:

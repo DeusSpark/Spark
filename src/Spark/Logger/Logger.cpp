@@ -12,7 +12,9 @@ Logger::Logger()
     m_levelNames.insert(std::make_pair(Fatal, "Fatal"));
 }
 
-Logger::~Logger() {}
+Logger::~Logger()
+{
+}
 
 void Logger::log(Level level, const std::string& message)
 {
