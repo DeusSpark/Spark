@@ -1,13 +1,16 @@
-#ifndef SPARK_LOGGER_HPP
-#define SPARK_LOGGER_HPP
+#pragma once
 
 #include <map>
 #include <string>
 
 namespace sp
 {
+class Engine;
+
 class Logger
 {
+    friend class Engine;
+
 public:
     enum Level
     {
@@ -19,15 +22,13 @@ public:
     };
 
 public:
+    void log(Level level, const std::string& message);
+
+private:
     Logger();
     ~Logger();
-
-public:
-    void log(Level level, const std::string& message);
 
 private:
     std::map<Level, std::string> m_levelNames;
 };
 }; // namespace sp
-
-#endif // SPARK_LOGGER_HPP
