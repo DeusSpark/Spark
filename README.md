@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-  - [SFML](https://www.sfml-dev.org)
+  * [SFML](https://www.sfml-dev.org)
 
 ## Clone
 
